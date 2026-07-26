@@ -7,13 +7,13 @@ import {
   GalleryGridCell,
 } from "@/components/ui/cta-section-with-gallery";
 
-const services = [
-  "Desarrollo Web",
-  "Apps Móviles",
-  "Software a la Medida",
-  "Tiendas en Línea",
-  "APIs e Integraciones",
-  "Soporte y Mantenimiento",
+const projectTypes = [
+  "Plataformas SaaS",
+  "Sistemas internos",
+  "Apps de campo",
+  "Portales de clientes",
+  "Integraciones ERP",
+  "Tableros de datos",
 ];
 
 const gallery = [
@@ -35,30 +35,30 @@ const gallery = [
   },
 ];
 
-export default function Services() {
+export default function Projects() {
   return (
-    <section id="servicios" className="relative bg-background py-24 md:py-32">
-      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 px-6 md:grid-cols-2 md:gap-16">
+    <section id="proyectos" className="relative bg-background py-24 md:py-32">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 px-6 md:grid-cols-2 md:gap-16">
         <ContainerStagger>
           <ContainerAnimated className="mb-4 block text-sm font-semibold tracking-wide text-brand">
-            Servicios
+            Proyectos
           </ContainerAnimated>
 
-          <ContainerAnimated className="text-4xl font-semibold tracking-tight text-balance md:text-[2.4rem]">
-            Todo lo que tu producto digital necesita
+          <ContainerAnimated className="mt-4 text-4xl font-semibold tracking-tight text-balance md:text-[2.4rem]">
+            Lo que hemos construido
           </ContainerAnimated>
 
           <ContainerAnimated className="my-4 text-base leading-relaxed text-muted-foreground text-pretty md:my-6 md:text-lg">
-            Cubrimos el ciclo completo: descubrimiento, diseño, desarrollo y
-            operación. Puedes contratar una pieza suelta o el proceso entero.
+            Trabajamos con equipos que necesitan software real en producción, no
+            prototipos. Estos son los tipos de proyecto que más entregamos.
           </ContainerAnimated>
 
           <ContainerAnimated>
             <ul className="mb-8 grid gap-x-6 gap-y-3 sm:grid-cols-2">
-              {services.map((service) => (
-                <li key={service} className="flex items-center gap-2.5 text-sm">
+              {projectTypes.map((type) => (
+                <li key={type} className="flex items-center gap-2.5 text-sm">
                   <Check className="size-4 shrink-0 text-brand" aria-hidden="true" />
-                  {service}
+                  {type}
                 </li>
               ))}
             </ul>
@@ -70,7 +70,7 @@ export default function Services() {
               className="bg-brand text-white hover:bg-brand-dark"
               size="lg"
             >
-              Cotizar mi proyecto
+              Conversemos de tu proyecto
             </Button>
           </ContainerAnimated>
         </ContainerStagger>
